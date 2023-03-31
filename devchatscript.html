@@ -16,13 +16,19 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #005290;
 	}
+	.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer {
+    		z-index: 99999;
+	}
+
+	.embeddedServiceHelpButton {
+	    z-index: 9999;
+	}    
 </style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 
 <script type='text/javascript'>
 	function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
-        console.log("Hello");
         if (!helpButton) {
           window.setTimeout(helpButtonLoaded, 500);
           return;
