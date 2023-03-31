@@ -22,7 +22,9 @@
 <script type='text/javascript'>
 	function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
-        helpButton.click(alert("Hello"););
+        helpButton.click(function() {
+	  alert("test");
+	});
         if (!helpButton) {
           window.setTimeout(helpButtonLoaded, 500);
           return;
